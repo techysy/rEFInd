@@ -8,7 +8,7 @@
 >
 > 官网：http://www.rodsbooks.com/refind/
 >
-> 项目地址：https://sourceforge.net/projects/refind/
+> 下载地址：https://sourceforge.net/projects/refind/
 >
 > 官方安装教程：http://www.rodsbooks.com/refind/installing.html 
 >
