@@ -1,4 +1,4 @@
-# rEFInd
+# rEFInd一个好看又好用的UEFI启动管理器
 
 ![EFI](refind.jpg) 
 
