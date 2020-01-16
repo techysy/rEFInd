@@ -2,7 +2,7 @@
 
 ![EFI](rEFInd.jpg) 
 
-使用rEFInd引导多系统启动 Windows 10、macOS 10.15.2（基于Open Core）、其他
+使用rEFInd引导多系统启动 Windows 10、macOS 10.15.2（基于Open Core）、Ubuntu
 
 > 软件版本：refind-bin-0.11.4
 >
@@ -49,41 +49,40 @@
 
 #### 我的配置：
 
-    #选择等待时间
-    
-    timeout 3
+#30s后打开屏幕保护程序 
+screensaver 30
 
-    #屏蔽自动搜索Windows启动项和其他启动项文件夹
-     
-    dont_scan_files \EFI\Microsoft\Boot\bootmgfw.efi 
-        
-    dont_scan_dirs /EFI/BOOT,/EFI/Microsoft,/EFI/OC
+#选择等待时间
+timeout 2
 
-    #手动添加启动项并设置图标
+#屏蔽自动搜索Windows启动项和其他启动项文件夹
+dont_scan_files \EFI\Microsoft\Boot\bootmgfw.efi 
+dont_scan_dirs /EFI/BOOT,/EFI/Microsoft,/EFI/OC,/EFI/ubuntu
 
-    menuentry "Windows 10" {
-         
+#手动添加启动项并设置图标
+
+menuentry Ubuntu {
+   volume "Ubuntu 18.04.3 LTS"
+   loader \EFI\ubuntu\grubx64.efi
+   icon \EFI\refind\themes\rEFInd-minimal\icons\os_ubuntu.png
+}
+
+
+menuentry "Windows 10" {
     volume "Windows 10"
-         
     icon \EFI\refind\themes\rEFInd-minimal\icons\os_win.png
-         
     loader \EFI\Microsoft\Boot\bootmgfw.efi 
-         
-    }
-         
-    menuentry "macOS 10.15.2" {
-         
+}
+
+menuentry "macOS 10.15.2" {
     volume "macOS boot"
-         
     icon \EFI\refind\themes\rEFInd-minimal\icons\os_mac.png
-         
     loader \EFI\OC\OpenCore.efi 
-    }
+}
 
-    #设置主题 我使用的minimal，也可以在 GitHub找到其他的主题
-    
-    #放在 EFI/rEFInd/themes目录下 并指向主题配置文件
+#设置主题 更喜欢minimal一点，也可以在GitHub找到更多的主题
+#当然也可以自己DIY
 
-    include themes\rEFInd-minimal\theme.conf 
+include themes\rEFInd-minimal\theme.conf 
 
-    #include themes\ursamajor-rEFInd\theme.conf
+#include themes\ursamajor-rEFInd\theme.conf
