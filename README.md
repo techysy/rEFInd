@@ -1,6 +1,6 @@
 # rEFInd一个好看又好用的UEFI启动管理器
 
-![EFI](refind.jpg) 
+![EFI](rEFInd.jpg) 
 
 使用rEFInd引导多系统启动 Windows 10、macOS 10.15.2（基于Open Core）、其他
 
