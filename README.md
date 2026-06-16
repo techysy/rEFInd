@@ -10,7 +10,7 @@
 
 | 项目 | 说明 |
 |------|------|
-| 版本 | refind-bin-0.11.4 |
+| 版本 | refind-bin-0.14.2（最新） |
 | 官网 | [rodsbooks.com/refind](http://www.rodsbooks.com/refind/) |
 | 下载 | [SourceForge](https://sourceforge.net/projects/refind/) |
 | 安装教程 | [官方安装文档](http://www.rodsbooks.com/refind/installing.html) |
@@ -30,7 +30,8 @@ rEFInd/
 │   ├── refind.conf           # 配置文件
 │   ├── drivers_x64/          # x64 驱动（ext4、ntfs、btrfs 等）
 │   └── themes/              # 主题目录
-├── refind-bin-0.11.4/        # 官方版本，包含驱动和安装脚本
+├── refind-bin-0.14.2/        # 官方最新版本，包含驱动和安装脚本
+├── refind-bin-0.11.4/        # 旧版本，保留供参考
 ├── Themes/                   # 主题包，可复制到 rEFInd 目录下使用
 └── Screenshot/               # 截图展示
 ```
@@ -49,7 +50,7 @@ rEFInd/
 
 推荐使用手动安装：
 
-1. 将 `refind-bin-0.11.4/refind/` 目录复制到 EFI 分区
+1. 将 `refind-bin-0.14.2/refind/` 目录复制到 EFI 分区
 2. 删除不需要的驱动（如 aa64、arm、其他 32 位处理器驱动），只保留 `drivers_x64`
 3. 使用 BCD、EasyUEFI 等工具添加 UEFI 启动项
 
