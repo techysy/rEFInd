@@ -1,15 +1,15 @@
-# rEFInd
+# rEFInd 🚀
 
 [![License](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](LICENSE)
 [![rEFInd](https://img.shields.io/badge/rEFInd-0.14.2-purple.svg)](http://www.rodsbooks.com/refind/)
 [![Platform](https://img.shields.io/badge/platform-UEFI%20(x64)%20|%20Linux%20|%20macOS%20|%20Windows-lightgrey.svg)](http://www.rodsbooks.com/refind/)
 [![GitHub stars](https://img.shields.io/github/stars/techysy/rEFInd?style=social)](https://github.com/techysy/rEFInd/stargazers)
 
-一款美观且功能强大的 **UEFI 启动管理器**，预配置多系统引导：**Windows 10**、**macOS**（基于 OpenCore）、**Ubuntu** 等。
+一款美观且功能强大的 **UEFI 启动管理器** 🎯 预配置多系统引导：**Windows 10** 🪟、**macOS** 🍎（基于 OpenCore）、**Ubuntu** 🐧 等。
 
 ![rEFInd 截图](rEFInd.jpg)
 
-## 项目结构
+## 📁 项目结构
 
 ```
 rEFInd/
@@ -22,7 +22,7 @@ rEFInd/
 └── Screenshot/               # 截图展示
 ```
 
-## 相关资源
+## 🔗 相关资源
 
 | 项目 | 说明 |
 |------|------|
@@ -33,9 +33,9 @@ rEFInd/
 | [ursamajor-rEFInd](https://github.com/kgoettler/ursamajor-rEFInd) | 另一款主题 |
 | [更多主题](https://github.com/topics/refind-theme) | GitHub 主题合集 |
 
-## 安装指南
+## 📦 安装指南
 
-### Linux 自动安装
+### 🐧 Linux 自动安装
 
 ```bash
 cd refind-bin-0.14.2
@@ -55,7 +55,7 @@ sudo ./refind-install --localkeys
 sudo ./refind-install --root /mountpoint
 ```
 
-### Linux 手动安装
+### 🐧 Linux 手动安装
 
 ```bash
 # 1. 复制文件
@@ -69,7 +69,7 @@ sudo mv /boot/efi/EFI/refind/refind.conf-sample /boot/efi/EFI/refind/refind.conf
 sudo efibootmgr -c -l \\\\EFI\\\\refind\\\\refind_x64.efi -L rEFInd
 ```
 
-### macOS 安装
+### 🍎 macOS 安装
 
 > macOS 10.11+ 需要先禁用 SIP
 
@@ -89,7 +89,7 @@ sudo cp -r refind-bin-0.14.2/refind /Volumes/ESP/EFI/
 sudo bless --mount /Volumes/ESP --setBoot --file /Volumes/ESP/EFI/refind/refind_x64.efi --shortform
 ```
 
-### Windows 安装
+### 🪟 Windows 安装
 
 以管理员身份运行命令提示符：
 
@@ -106,15 +106,15 @@ bcdedit /set "{bootmgr}" description "rEFInd Boot Manager"
 
 或使用 [EasyUEFI](http://www.easyuefi.com/) 图形界面工具。
 
-## 卸载
+## ❌ 卸载
 
 | 平台 | 命令 |
 |:----|:------|
-| Linux | `sudo rm -r /boot/efi/EFI/refind && efibootmgr -b X -B` |
-| macOS | `sudo rm -r /Volumes/ESP/EFI/refind && sudo bless --mount /Volumes/Macintosh\ HD --setBoot` |
-| Windows | EasyUEFI 删除启动项 + 删除 `EFI\refind\` 目录 |
+| 🐧 Linux | `sudo rm -r /boot/efi/EFI/refind && efibootmgr -b X -B` |
+| 🍎 macOS | `sudo rm -r /Volumes/ESP/EFI/refind && sudo bless --mount /Volumes/Macintosh\ HD --setBoot` |
+| 🪟 Windows | EasyUEFI 删除启动项 + 删除 `EFI\refind\` 目录 |
 
-## 配置示例 (`refind.conf`)
+## ⚙️ 配置示例 (`refind.conf`)
 
 ```conf
 screensaver 30
@@ -145,6 +145,6 @@ menuentry "macOS 10.15.2" {
 include themes\rEFInd-minimal\theme.conf
 ```
 
-## License
+## 📄 License
 
 GPL 3.0
